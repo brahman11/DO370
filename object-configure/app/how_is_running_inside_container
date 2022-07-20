@@ -1,0 +1,9 @@
+oc rsh image-tool-s3-obc-7f89dd7cc7-gr8g7 
+
+(app-root) sh-4.4$ ps -ef
+(app-root) sh-4.4$ ps -ef > new
+(app-root) sh-4.4$ cat new
+UID          PID    PPID  C STIME TTY          TIME CMD
+1000670+       1       0  0 18:50 ?        00:00:00 /opt/app-root/bin/python3.8 /opt/app-root/bin/gunicorn app:app --bind 0.0.0.0:5000 --reload --preload --capture-output --log-level info --access-logfile - --error-logfile -
+1000670+      12       1  0 18:50 ?        00:00:06 /opt/app-root/bin/python3.8 /opt/app-root/bin/gunicorn app:app --bind 0.0.0.0:5000 --reload --preload --capture-output --log-level info --access-logfile - --error-logfile -
+
